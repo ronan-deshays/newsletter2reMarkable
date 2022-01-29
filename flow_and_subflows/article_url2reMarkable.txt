@@ -1,0 +1,7 @@
+WebAutomation.GoToWebPage.GoToWebPage BrowserInstance: Browser Url: Current_article_url_to_read
+/# EXPLANATION : Below click triggers the read on remarkable single click button extension. Much simpler than understanding the reMarkable API.
+
+LIMITATION : Send raw mouse click to bypass Power Automate limitation : clic on extension button not authorised in Microsoft Edge#/
+MouseAndKeyboard.SendMouseClick.ClickAt ClickType: MouseAndKeyboard.MouseClickType.LeftClick MillisecondsDelay: 2 X: 1356 Y: 62 RelativeTo: MouseAndKeyboard.PositionRelativeTo.Screen MovementStyle: MouseAndKeyboard.MovementStyle.Instant
+# Wait a few seconds that read on remarkable extension finish export
+WAIT 3

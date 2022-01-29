@@ -1,0 +1,5 @@
+Outlook.Launch Instance=> OutlookInstance
+WebAutomation.LaunchEdge.LaunchEdge Url: $'''about:blank''' WindowState: WebAutomation.BrowserWindowState.Normal ClearCache: False ClearCookies: False Timeout: 60 BrowserInstance=> Browser
+CALL leMonde
+Outlook.Close Instance: OutlookInstance
+WebAutomation.CloseWebBrowser BrowserInstance: Browser

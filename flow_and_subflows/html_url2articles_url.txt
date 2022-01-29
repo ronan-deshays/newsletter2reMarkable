@@ -1,0 +1,6 @@
+WebAutomation.GoToWebPage.GoToWebPage BrowserInstance: Browser Url: URL_view_in_browser
+WebAutomation.GetDetailsOfWebPage BrowserInstance: Browser DetailsType: WebAutomation.DetailsType.Source Details=> Source_newsletter_in_browser
+Text.ParseText.RegexParse Text: Source_newsletter_in_browser TextToFind: regexp_article_url StartingPosition: 0 IgnoreCase: False Matches=> Matches_articles_url
+LOOP FOREACH Current_article_url_to_read IN Matches_articles_url
+    CALL article_url2remarkable
+END

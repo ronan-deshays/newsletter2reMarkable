@@ -1,0 +1,7 @@
+Outlook.RetrieveEmailMessages.RetrieveEmails Instance: OutlookInstance Account: $'''your_account_here''' MailFolder: $'''folder_name_here''' EmailsToRetrieve: Outlook.RetrieveMessagesMode.Unread MarkAsRead: True FromContains: $'''your_email_adress_here''' Messages=> RetrievedEmails
+SET regexp_article_url TO $'''https://www.lemonde.fr/[\\w]*/article/[^?]*'''
+LOOP FOREACH CurrentEmail IN RetrievedEmails
+    Text.ParseText.RegexParseForFirstOccurrence Text: CurrentEmail.BodyText TextToFind: $'''Voir dans un navigateur \\<[\\S]*\\>''' StartingPosition: 0 IgnoreCase: False Match=> Match_sentence_and_url
+    Text.ParseText.RegexParseForFirstOccurrence Text: Match_sentence_and_url TextToFind: $'''https://[^\\>]*''' StartingPosition: 0 IgnoreCase: False Match=> URL_view_in_browser
+    CALL html_url2articles_url
+END
