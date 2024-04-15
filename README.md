@@ -3,6 +3,8 @@ Power automate desktop flow to scrap email, and then to send articles found to r
 
 📬 :arrow_right: :newspaper: :arrow_right: 📖
 
+Watch the tool in action on this [Youtube video](https://youtu.be/LXJ97C3QhLk?si=XsdL406DdQ8GBZ2Q) 🎬
+
 ## Requirements
 
 ### :bulb: Legend
@@ -85,12 +87,6 @@ In your PAD project (follow [How to use](https://github.com/ronan-deshays/newsle
 ### Without Outlook and Office 365
 
 PAD contains IMAP blocs, replace Outlook blocs with IMAP blocs and connect them to your mail service.
-
-## Related projects
-
-### Incomming
-
-Custom [La Matinale du Monde](https://www.lemonde.fr/mobile/#appli-matinale) app, which gather informations from different sources and let the end user select articles to read using a Tinder-like interface.
 
 ## Disclaimer
 
